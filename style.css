@@ -7,7 +7,7 @@
     text-decoration: double;
     text-decoration: underline;
     margin: 0;
-    
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
 }
 #div1{
     background-color: palevioletred;
@@ -16,6 +16,8 @@
     padding: 20px 45px;
     border-radius: 50% 60% 40% 50%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+    max-width: 90vw;
+    text-align: center;
 }
 #head2{
     font-weight: 600;
