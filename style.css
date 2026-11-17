@@ -32,49 +32,32 @@
     margin: 10px 10px 10px 10px;
     padding: 10px 10px;
     border-radius: 10px 10px 10px 10px;
+}#header-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;              /* Space between balloons and title */
+    flex-wrap: wrap;        /* Automatically stacks cleanly on narrow screens */
+    margin-top: 25px;
+    padding: 0 15px;
 }
-.balloon{
-    position: absolute;
-    top: 25px;
-    width: 110px;
-    height: 140px;
-    font-size: 1.2rem;
+
+.balloon {
+    position: relative;     /* Keeps the dangling ::after thread attached! */
+    width: 95px;
+    height: 120px;
+    font-size: 1.1rem;
     color: deeppink;
     background-color: darkblue;
-    margin: 10px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: inset -8px -8px 15px rgba(0, 0, 0, 0.3), 0 6px 15px rgba(0, 0, 0, .15);
-}
-#lblon{
-    left: 20%;
-}
-#rblon{
-    right: 20%;
-}
-.balloon::after{
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 24px;
-    height: 110px;
-    background-repeat: no-repeat;
-    background-position: top center;
-}
-#lblon::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='110' viewBox='0 0 24 110'%3E%3Cpath d='M12 0 Q 22 25, 12 55 T 12 110' fill='none' stroke='%23ff69b4' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
-}
-#rblon::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='110' viewBox='0 0 24 110'%3E%3Cpath d='M12 0 Q 2 25, 12 55 T 12 110' fill='none' stroke='%23ffd700' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
-}
-.balloon{
     cursor: pointer;
+    box-shadow: inset -8px -8px 15px rgba(0, 0, 0, 0.3);
+    animation: float 2s ease-in-out infinite;
 }
 #pic-box{
     display: flex;
